@@ -1,11 +1,11 @@
-- apiVersion: v1
+apiVersion: v1
   kind: Namespace
   metadata:
     name: azure-vote
   spec:
     finalizers:
       - kubernetes
-- apiVersion: apps/v1
+apiVersion: apps/v1
   kind: Deployment
   metadata:
     name: azure-vote-back
@@ -38,7 +38,7 @@
             ports:
               - containerPort: 6379
                 name: redis
-- apiVersion: v1
+apiVersion: v1
   kind: Service
   metadata:
     name: azure-vote-back
@@ -48,7 +48,7 @@
       - port: 6379
     selector:
       app: azure-vote-back
-- apiVersion: apps/v1
+apiVersion: apps/v1
   kind: Deployment
   metadata:
     name: azure-vote-front
@@ -80,7 +80,7 @@
             env:
               - name: REDIS
                 value: azure-vote-back
-- apiVersion: v1
+apiVersion: v1
   kind: Service
   metadata:
     name: azure-vote-front
