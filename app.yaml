@@ -54,7 +54,7 @@ metadata:
   name: azure-vote-front
   namespace: alberto-proyecto-azure-k8s-gitops-demo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: azure-vote-front
