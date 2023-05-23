@@ -32,7 +32,7 @@ spec:
             memory: 128Mi
           limits:
             cpu: 250m
-            memory: 256Mi
+            memory: 512Mi
         ports:
         - containerPort: 6379
           name: redis
@@ -54,7 +54,7 @@ metadata:
   name: azure-vote-front
   namespace: alberto-proyecto-azure-k8s-gitops-demo
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: azure-vote-front
